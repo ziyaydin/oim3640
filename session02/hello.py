@@ -1,0 +1,8 @@
+print('Hello, world')
+print('Hello, world')
+print('Hello, world')
+print('Hello, world')
+print(10 - 5)
+print( 10 - -5)
+print(10, 10)
+Print(10 + 10 - (15 * 2))
