@@ -35,3 +35,5 @@ increase = ((ng-og)/og)
 percentage = f"{increase:.1%}"
 print(percentage)
 print("My grade would increased by", percentage)
+
+#End
