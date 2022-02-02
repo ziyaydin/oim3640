@@ -5,7 +5,7 @@
 #     print('End of GH day')
 #     time.sleep(2)
 #     gd()
-###################3# FUNCTIONS#########################3
+# 3# FUNCTIONS#########################3
 
 import math
 
@@ -35,6 +35,8 @@ area_of_circle(r3)
 def print_lyrics():
     print("Hey Jude. Don't make it bad.")
     print("Take a sad song and make it better.")
+
+
 type(print_lyrics)
 print_lyrics()
 
@@ -43,11 +45,11 @@ print_lyrics()
 #     return str1
 # print(give_me_a_break())
 
+
 def give_me_a_break():
     str1 = 'break'
     return str1
     print('another break')
-    
+
+
 print(give_me_a_break())
-
-
