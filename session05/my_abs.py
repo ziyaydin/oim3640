@@ -58,6 +58,6 @@ def quadratic(a, b, c):
     else:
         print('Sorry, I miss this class in highschool. I can\'t remember what happens when the discriminant of the polynomial is less than 0 :(')
 
-
+quadratic(1, -3, 2)
 quadratic(1, 3, 4)
 quadratic(1, 3, -4)
