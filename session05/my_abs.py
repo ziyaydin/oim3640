@@ -52,7 +52,7 @@ def quadratic(a, b, c):
     discriminant_of_polynomial = b * b - 4 * a * c
     sqrt_part = math.sqrt(abs(discriminant_of_polynomial))
     if discriminant_of_polynomial > 0:
-        print((-b + sqrt_part) / (2 * a),(-b - sqrt_part) / (2 * a) )
+        print((-b + sqrt_part) / (2 * a), (-b - sqrt_part) / (2 * a))
     elif discriminant_of_polynomial == 0:
         print(-b / (2 * a))
     else:
@@ -61,4 +61,3 @@ def quadratic(a, b, c):
 
 quadratic(1, 3, 4)
 quadratic(1, 3, -4)
-
