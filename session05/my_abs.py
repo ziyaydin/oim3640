@@ -32,19 +32,19 @@ print(my_abs_2(-50))
 
 
 def my_abs_3(number):
-    """if number is an integer or float take the absolute vallue, if it something else say BYE"""
+    """if number is an integer or float take the absolute vallue, if it something don't take it"""
     if isinstance(number, int):
         return my_abs_2(number)
     elif isinstance(number, float):
         return my_abs_2(number)
     else:
-        return 'Bye'
+        return 'Sorry but will not take the absolute value of this because it is not an integer or float :( '
 
 
 print(my_abs_3('ziya'))
 print(my_abs_3(-508))
 
-# #ex_06
+# ex_06
 
 
 def quadratic(a, b, c):
