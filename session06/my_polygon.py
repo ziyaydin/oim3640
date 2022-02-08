@@ -187,7 +187,7 @@ def fancy_stars(t, n, q, z):
 # Exercise 3.4
 
 
-def spiral(t, lenght, s):  # Got help from: https://dev.to/taarimalta/how-to-draw-a-spiral-with-python-turtle-2n5c
+def spiral(t, s):  # Got help from: https://dev.to/taarimalta/how-to-draw-a-spiral-with-python-turtle-2n5c
     """This function creates spirals
     s is the degree of one interior angle of the shape we want
     t is a turtle"""
@@ -195,7 +195,7 @@ def spiral(t, lenght, s):  # Got help from: https://dev.to/taarimalta/how-to-dra
         t.fd(i)
         t.rt(s)
 
-# spiral(leo, 30, 60)
+# spiral(leo, 90)
 
 
 turtle.mainloop()
