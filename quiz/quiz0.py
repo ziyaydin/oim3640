@@ -39,35 +39,37 @@ Notice:
 3. Write your own test code, i.e. call the function.
 """
 
-def weight_2():
-    """
-    this function takes your weight on earth
-    then converts your earth weight to the weight of another planet"""
-    #1. ask the weight of on earth
-    #2. ask the which planet they are at
-    #3. return the the weight in the appropriate planet
-    weight = float(input('What is your weight on earth:'))
-    planet = str(input('what planet you are at: (plase make the first letter of the planet capital)'))
-    if planet == 'Moon':
-        return(weight * 0.165)
-    elif planet == 'Mars':
-        return(weight * 0.378)
-    elif planet == 'Jupiter':
-        return(weight * 2.528)
-    else:
-        print('Sorry, don\'t know that planet')
-
-# print(weight_2())
 
 def weight_3(weight, planet):
     """This function takes your weight on earth and converts to the weight in another planet"""
     if planet == 'Moon':
-        return(weight * 0.165)
+        return weight * 0.165
     elif planet == 'Mars':
-        return(weight * 0.378)
+        return weight * 0.378
     elif planet == 'Jupiter':
-        return(weight * 2.528)
+        return weight * 2.528
     else:
         print('Sorry, don\'t know that planet')
 
 print(weight_3(100, 'Moon'))
+
+#VERSION 1 READ THE QUESTION CAREFUL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# def weight_2():
+#     """
+#     this function takes your weight on earth
+#     then converts your earth weight to the weight of another planet"""
+#     #1. ask the weight of on earth
+#     #2. ask the which planet they are at
+#     #3. return the the weight in the appropriate planet
+#     weight = float(input('What is your weight on earth:'))
+#     planet = str(input('what planet you are at: (plase make the first letter of the planet capital)'))
+#     if planet == 'Moon':
+#         return weight * 0.165
+#     elif planet == 'Mars':
+#         return weight * 0.378
+#     elif planet == 'Jupiter':
+#         return weight * 2.528
+#     else:
+#         print('Sorry, don\'t know that planet')
+
+# # print(weight_2())
