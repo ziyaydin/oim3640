@@ -57,4 +57,17 @@ def weight_2():
     else:
         print('Sorry, don\'t know that planet')
 
-print(weight_2())
+# print(weight_2())
+
+def weight_3(weight, planet):
+    """This function takes your weight on earth and converts to the weight in another planet"""
+    if planet == 'Moon':
+        return(weight * 0.165)
+    elif planet == 'Mars':
+        return(weight * 0.378)
+    elif planet == 'Jupiter':
+        return(weight * 2.528)
+    else:
+        print('Sorry, don\'t know that planet')
+
+print(weight_3(100, 'Moon'))
