@@ -17,7 +17,7 @@ def check_fermat(a, b, c, n):
 # Ex1.1.2
 
 
-def check_fermat():
+def check_fermat_2():
     """
     this functions checks whether Fermat's Last Theorem is correct or not
     a, b, c and n are positive integers
@@ -27,12 +27,9 @@ def check_fermat():
     b = int(input("Positive integer for b: "))
     c = int(input("Positive integer for c: "))
     n = int(input("Positive integer for n which is greater than 2: "))
-    if n > 2 and (a**n + b**n == c**n):
-        print("Holy smokes, Fermat was wrong!")
-    else:
-        print("No, that doesn\' work.")
+    check_fermat(a, b, c, n)
 
-# check_fermat()
+check_fermat_2()
 
 # Ex1.2
 
@@ -58,4 +55,4 @@ def get_bmi_category():
         return "Obesity"
 
 
-print(get_bmi_category())
+# print(get_bmi_category())
