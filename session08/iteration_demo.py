@@ -1,17 +1,18 @@
-#Ex 1.2
+# Ex 1.2
 def sum1000():
-    result = 0 # the initial value
+    result = 0  # the initial value
     for i in range(1, 1001):
         print(f'Iteration {i}:')
         print(f' Before adding {i}, current result is {result}.')
-        result = result + i #result += 1
+        result = result + i  # result += 1
         print(f' after adding {i}, result becomes {result}. \n')
 
     print(result)
 
-#sum(1000)
+# sum(1000)
 
-#Ex 1.3
+# Ex 1.3
+
 
 def sum_odd():
     """ """
@@ -25,6 +26,7 @@ def sum_odd():
 
 # print(sum_odd())
 
+
 def sum_odd_2():
     result = 0
     for i in range(1, 1001, 2):
@@ -33,7 +35,9 @@ def sum_odd_2():
 
 # print(sum_odd_2())
 
-################################# WHILE LOOP
+# WHILE LOOP
+
+
 def countdown(n):
     while n > 0:
         print(n)
@@ -45,13 +49,12 @@ def countdown(n):
 # iteration = 0
 # count = 0
 # while iteration < 5:
-#     # the variable 'letter' in the loop stands for every 
+#     # the variable 'letter' in the loop stands for every
 #     # character, including spaces and commas!
-#     for letter in "hello, world": 
+#     for letter in "hello, world":
 #         count += 1
 #     print("Iteration " + str(iteration) + "; count is: " + str(count))
-#     iteration += 1 
-
+#     iteration += 1
 
 
 def countdown(n):
@@ -65,18 +68,18 @@ def countdown(n):
 # iteration = 0
 # count = 0
 # while iteration < 5:
-#     # the variable 'letter' in the loop stands for every 
+#     # the variable 'letter' in the loop stands for every
 #     # character, including spaces and commas!
 #     for letter in "hello, world":
 #         count = count + 1
 #     print("Iteration " + str(iteration) + "; count is: " + str(count))
-#     iteration += 1 
+#     iteration += 1
+
 
 i = 0
 while (i <= 100):
     i += 1
     print(i)
-
 
 
 # iteration = 0
@@ -85,7 +88,7 @@ while (i <= 100):
 #     for letter in "hello, world":
 #         count += 1
 #     print("Iteration " + str(iteration) + "; count is: " + str(count))
-#     iteration += 1 
+#     iteration += 1
 
 # iteration = 0
 # while iteration < 5:
@@ -95,7 +98,7 @@ while (i <= 100):
 #         if iteration % 2 == 0:
 #             break
 #     print("Iteration " + str(iteration) + "; count is: " + str(count))
-#     iteration += 1 
+#     iteration += 1
 
 # ###EXERCISE 03
 # import sys #For epilson
@@ -119,7 +122,7 @@ while (i <= 100):
 # #         print(alpha)
 # #         beta = math.sqrt(a)
 # #         print(beta)
-# #         print(abs(alpha - beta)) 
+# #         print(abs(alpha - beta))
 
 # # the_sqrt_table()
 
@@ -142,14 +145,13 @@ while (i <= 100):
 #         print(harf_sayisi)
 
 
-
 # harf()
 # defa = 0
 # harfsayisi = 0
 # while defa < 5:
-#     # the variable 'letter' in the loop stands for every 
+#     # the variable 'letter' in the loop stands for every
 #     # character, including spaces and commas!
-#     for harf in "hello, world": 
+#     for harf in "hello, world":
 #         harfsayisi += 1
 #     print("ninci defa " + str(defa) + "; harfsayisi is: " + str(harfsayisi))
-#     defa += 1 
+#     defa += 1
