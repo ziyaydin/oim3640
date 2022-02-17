@@ -1,5 +1,6 @@
 # EX2.2
-
+from cmath import sqrt
+import math
 # Calculate the sum of integers from 1 to 10. WITH WHILE LOOP
 def sum_from_0_to(ceiling_number):
     """ prints the sum of numbers from 0 to ceiling_number """
@@ -50,9 +51,8 @@ def sum_of_odds_from_0_to(ceiling_number):
     print(summ)
 # sum_of_odds_from_0_to(100)
 
-# EX 3 TODO: Figure out how to print table. Tried tabulate function but didint work
-
-
+# EX 3 TODO: I need to learn a better way to print as a table. Proper columns etc
+# TODO: How can i print this at once for multiple a values in a proper table 
 def newtons_method(a):
     x = a/2
     while True:
@@ -60,7 +60,8 @@ def newtons_method(a):
         if abs(y-x) < 0.0000001:
             break
         x = y
-    print(x)
-
+    print( "a", "mysqrt(a)", "math.sqrt(a)", "  diff")
+    print( a, "   ", round(x,2), "   " , math.sqrt(a),"         ", round((x - math.sqrt(a)),2))
 
 newtons_method(9)
+
