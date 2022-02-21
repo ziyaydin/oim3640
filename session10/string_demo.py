@@ -91,8 +91,9 @@ def any_lowercase5(s):
     return True
 # any_lowercase5('ZIYA')
 
-# #Exercise 05
-new_word = 'cheer'
+# #Exercise 05 
+new_word = 'g fmnc wms bgblr rpylqjyrc gr zw fylb.'
+cheer = 'cheer'
 def rotate_word(new_word, number):
     #1. transform every letter to a number by using ord function
     #2. add the number to every letter
@@ -102,5 +103,7 @@ def rotate_word(new_word, number):
     for letters in new_word:
         print(chr(ord(letters) + number))
 
-rotate_word(new_word, 7)
+# rotate_word(new_word, 2)
+
+rotate_word(cheer, 7)
 
