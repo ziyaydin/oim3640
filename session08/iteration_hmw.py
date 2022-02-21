@@ -51,17 +51,44 @@ def sum_of_odds_from_0_to(ceiling_number):
     print(summ)
 # sum_of_odds_from_0_to(100)
 
-# EX 3 TODO: I need to learn a better way to print as a table. Proper columns etc
-# TODO: How can i print this at once for multiple a values in a proper table 
+# # EX 3 TODO: I need to learn a better way to print as a table. Proper columns etc
+# # TODO: How can i print this at once for multiple a values in a proper table 
+# def newtons_method(a):
+#     x = a/2
+#     while True:
+#         y = (x + a/x) / 2
+#         if abs(y-x) < 0.0000001:
+#             break
+#         x = y
+#     print( "a", "newtons_method(a)", "math.sqrt(a)", "  diff")
+#     print( a, "   ", round(x,2), "   " , math.sqrt(a),"         ", round((x - math.sqrt(a)),2))
+
+# newtons_method(9)
+
 def newtons_method(a):
-    x = a/2
+    """
+    Use Newton's method to compute square root of a positive number.
+    """
+    epsilon = 1e-5
+    x = 1
     while True:
-        y = (x + a/x) / 2
-        if abs(y-x) < 0.0000001:
+        y = (x + a / x) / 2
+        if abs(y - x) < epsilon:
             break
         x = y
-    print( "a", "mysqrt(a)", "math.sqrt(a)", "  diff")
-    print( a, "   ", round(x,2), "   " , math.sqrt(a),"         ", round((x - math.sqrt(a)),2))
+    return y
 
-newtons_method(9)
 
+def newtons_method_test_table(n):
+    """
+    Print the square root of integers from 1 to N-1
+    """
+    # print("{:3} {:14} {:14} {:14}".format("a", "newtons_method(a)", "math.sqrt(a)", "diff"))
+    print("a   newtons_method(a)      math.sqrt(a)   diff          ")
+    print(f"{'-' * 3:3} {'-' * 13:14} {'-' * 13:14} {'-' * 17:17}")
+    for a in range(1, n):
+        print(
+            f"{a:>3d} {newtons_method(a):<14.12g} {math.sqrt(a):<14.12g} {abs(newtons_method(a) - math.sqrt(a)):<14.12g}"
+        )
+
+newtons_method_test_table(10)
