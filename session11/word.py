@@ -173,24 +173,24 @@ def is_abecedarian(word):
     (double letters are ok).
     """
 #My code Using sorted
-    # word = list(word) #makes the word  as alist to sort them alphabetically in the next step
-    # alphabetical_order = sorted(word) #sorted means that alphabtically sorted. 
-    # if word == alphabetical_order:
-    #     # print(word) #To visualize that word is and what alphabtical_order is 
-    #     # print(alphabetical_order)
-    #     return True
-    # else:
-    #     # print(word)
-    #     # print(alphabetical_order)
-    #     return False
-#Mycode
-    letter_place = 0
-    for letters in range(len(word)-1):
-        letter_place += 1
-        if ord(word[letter_place]) > ord(word[letter_place + 1]):
-            return 'False'
-        else:
-            return 'True'
+    word = list(word) #makes the word  as alist to sort them alphabetically in the next step
+    alphabetical_order = sorted(word) #sorted means that alphabtically sorted. 
+    if word == alphabetical_order:
+        # print(word) #To visualize that word is and what alphabtical_order is 
+        # print(alphabetical_order)
+        return True
+    else:
+        # print(word)
+        # print(alphabetical_order)
+        return False
+# #Mycode not using sorted
+    # letter_place = 0
+    # for letters in range(len(word)-1):
+    #     letter_place += 1
+    #     if ord(word[letter_place]) > ord(word[letter_place + 1]):
+    #         return 'False'
+    #     else:
+    #         return 'True'
 # # Professors code:
 #     for i in range(len(word)-1):
 #         if word[i+1] < word[i]:
@@ -198,9 +198,9 @@ def is_abecedarian(word):
 #         return True
 
 
-print(is_abecedarian('abs'))
-print(is_abecedarian('college'))
-print(is_abecedarian('aaabcdef'))
+# print(is_abecedarian('abs'))
+# print(is_abecedarian('college'))
+# print(is_abecedarian('aaabcdef'))
 
 def find_abecedarian_words():
     """
