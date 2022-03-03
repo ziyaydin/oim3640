@@ -33,5 +33,5 @@ def bad_word():
             bad += 1
             return bad
         for letters in word:
-            if word[letters] == word[letters]: #WIP
+            if word[letters] == word[letters + 1]: #WIP
         pass
