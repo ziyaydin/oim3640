@@ -131,8 +131,8 @@ def has_duplicates(s):
     >>> print(has_duplicates('abba'))
     True
     """
-    # for element in range(len(s)): #DIDINT WORK
-    #     if s[element] == s:
+    # for element in range(len(s)-1): #DIDINT WORK
+    #     if s[element] in s[element + 1:]:
     #         return True
     #     return False
     if len(s) == len(set(s)):
