@@ -109,3 +109,8 @@ number_fib_calls = 0
 # print('function calls', number_fib_calls)
 
 #EXERCISE 4
+
+#1
+def word_finder():
+    f = open('data/random_words.txt')  #we need this to look at randomword data file
+
