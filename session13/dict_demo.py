@@ -12,7 +12,14 @@ def histogram(s):
 
 # print(histogram('kazmator'))
 
+#EXERCISE 1
+def histogram2(word): #Got help from https://github.com/epequeno/ThinkPy-Solutions/blob/master/ch11/11.02.py
+    dictionary = dict()
+    for character in word:
+        dictionary[character] = 1 + dictionary.get(character, 0)
+    return dictionary
 
+print(histogram2("Old MACDONALD had a farm E-I-E-I-O And on his farm he had a cow E-I-E-I-O With a moo moo here And a moo moo there Here a moo, there a moo Everywhere a moo moo Old MacDonald had a farm E-I-E-I-O"))
 
 def reverse_lookup(d, v):
     for k in d:
@@ -36,10 +43,10 @@ def invert_dict(d):
     return inverse
 
 hist = histogram('parrot')
-print(hist)
+# print(hist)
 
 inverse = invert_dict(hist)
-print(inverse)
+# print(inverse)
 
 t = [1, 2, 3]
 d = dict()
