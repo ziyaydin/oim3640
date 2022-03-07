@@ -3,25 +3,17 @@
 # - and contain at least one letter that occurs twice in a row,
 # - and have same first letter and last letter. 
 
+from re import I
 
-def uses_only(word, available):
-    """
-    takes a word and a string of letters, and that returns True if the word
-    contains only letters in the string available.
-    """
-    for letter in word: 
-        if letter not in available:
-            return False
-    return True
 
 def find_words_only_use_covid(word): 
     """This function creates words that only has the letters of "planet" 
     """
-    words_with_covid= 0 
-    word = word.strip()
-    if uses_only(word,'covid'):
-        words_with_covid +=1
-    if words_with_covid >= 3:
+    count = 0
+    for letters in range(len(word)):
+        if word[letters] in 'covid':
+            count = count + 1
+    if count >= 3:
         return True
     else:
         return False
@@ -53,11 +45,10 @@ def bad_word():
     
     """
     f = open('data/random_words.txt')  #we need this to look at randomword data file
+    count2 = 0
     for i in f:
         i = i.strip()
-        if same_last_same_first(i) == True:
-            if has_adjacent_duplicates(i) == True:
-                if find_words_only_use_covid(i) == True:
-                    print(i)
+        if same_last_same_first(i) == True and has_adjacent_duplicates(i) == True and find_words_only_use_covid(i) == True:
+            print(i)
 
 bad_word()
