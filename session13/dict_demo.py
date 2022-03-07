@@ -110,11 +110,12 @@ number_fib_calls = 0
 
 #EXERCISE 4
 
-#1
+#1 Write a function that reads the words in words.txt and stores them as keys in a dictionary. It doesn’t matter what the values are. Then you can use the in operator as a fast way to check whether a string is in the dictionary.
 def word_finder():
     f = open('data/random_words.txt')  #we need this to look at randomword data file
     pass
 
+#2 Write a function named has_duplicates that takes a list as a parameter and returns True if there is any object that appears more than once in the list.
 def has_duplicates(s):
     """Returns True if any element appears more than once in a sequence.
     """
