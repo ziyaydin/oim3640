@@ -113,4 +113,13 @@ number_fib_calls = 0
 #1
 def word_finder():
     f = open('data/random_words.txt')  #we need this to look at randomword data file
+    pass
+
+def has_duplicates(s):
+    """Returns True if any element appears more than once in a sequence.
+    """
+    if len(s) == len(set(s)):
+        return False
+    else:
+        return True
 
