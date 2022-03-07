@@ -12,7 +12,7 @@ def histogram(s):
 
 # print(histogram('kazmator'))
 
-#EXERCISE 1
+#EXERCISE 1######################33
 def histogram2(word): #Got help from https://github.com/epequeno/ThinkPy-Solutions/blob/master/ch11/11.02.py
     dictionary = dict()
     for character in word:
@@ -65,7 +65,7 @@ def fibonacci(n):
 # for i in range(10):
 #     print(fibonacci(i), end=", ")
 
-#EXERCISE 2
+#EXERCISE 2###########################################
 def fib(n):
     """
     an intuitive version of fibonacci
@@ -108,7 +108,7 @@ number_fib_calls = 0
 # print(fib_efficient(fib_args))
 # print('function calls', number_fib_calls)
 
-#EXERCISE 4
+#EXERCISE 4###############################################################################3
 
 #1 Write a function that reads the words in words.txt and stores them as keys in a dictionary. It doesn’t matter what the values are. Then you can use the in operator as a fast way to check whether a string is in the dictionary.
 def word_finder():
