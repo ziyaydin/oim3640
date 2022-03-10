@@ -42,6 +42,7 @@ t = divmod(7, 3)
 
 # """
 
+
 def sorter(w): # 2. sort one word, convert the word to a sorted tuple/string
     """
     sorts the letters in the word in alphabetical order
@@ -62,7 +63,7 @@ def anagram_finder(): #3. create a dictionary, key is the sorted tuple/string, v
             d[t] = [word]
         else:
             d[t].append[word] #if sorted letters (t) is not in the dictionary (d) add the word to dictionary
-    print(d)
+    # print(d)
 
 def print_anagram_sets(d):
     """Prints the anagram sets in d.
@@ -72,7 +73,7 @@ def print_anagram_sets(d):
         if len(v) > 1:
             print(len(v), v)
 
-anagram_finder()
+# anagram_finder()
 
 
 def print_anagram_sets(d):
@@ -82,6 +83,20 @@ def print_anagram_sets(d):
     for v in d.values():
         if len(v) > 1:
             print(len(v), v)
+
+with open('words.txt') as f:
+        x = f.read().split()
+        y = []
+        c =[]
+        sortedc = []
+        anagrams = {}
+        counter = 0
+        for i in x:
+                y.append(sorted(i))  
+        for word in y:
+                anagrams[''.join(word)] = 1
+                sortedc.append(''.join(word))
+print(sorted(sortedc))
 
 
 def is_anagram(word1, word2):
