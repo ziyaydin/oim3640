@@ -84,6 +84,16 @@ def print_anagram_sets(d):
         if len(v) > 1:
             print(len(v), v)
 
+def is_anagram(word1, word2):
+    """Checks whether two words are anagrams
+    """
+    if sorted(word1) == sorted(word2):
+        return True
+    else:
+        return False
+
+
+####Best try so far####
 with open('words.txt') as f:
         x = f.read().split()
         y = []
@@ -92,17 +102,11 @@ with open('words.txt') as f:
         anagrams = {}
         counter = 0
         for i in x:
-                y.append(sorted(i))  
+                y.append(sorted(i))  #one big list of all of the sorted words
         for word in y:
-                anagrams[''.join(word)] = 1
+                anagrams[''.join(word)] = 1 #creating a dictionary with keys of sorted words and count of how many words as values #TODO: Dictionary doesnt work
                 sortedc.append(''.join(word))
 print(sorted(sortedc))
 
 
-def is_anagram(word1, word2):
-    """Checks whether two words are anagrams
-    """
-    if sorted(word1) == sorted(word2):
-        return True
-    else:
-        return False
+
