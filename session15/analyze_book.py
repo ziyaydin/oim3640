@@ -111,7 +111,6 @@ def random_word(hist): #Got help from https://github.com/AllenDowney/ThinkPython
         t.extend([word] * freq)
     return random.choice(t)
 
-
 def main():
     hist = process_file('data/Pride and Prejudice.txt', skip_header=True)
     # print(hist)
