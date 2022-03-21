@@ -76,7 +76,6 @@ def most_common(hist, excluding_stopwords=False):
         lst.append((freq, word))
     lst.sort(reverse = True)
     return lst
-    #return sorted([a[1], 
 
 
 def print_most_common(hist, num=10): #Got help from https://github.com/AllenDowney/ThinkPython2/blob/master/code/analyze_book1.py
@@ -120,9 +119,10 @@ def main():
     # print('Number of different words:', different_words(hist))
 
     # t = most_common(hist, excluding_stopwords=True)
-    # print('The most common words are:')
-    # for freq, word in t[0:20]:
-    #     print(word, '\t', freq)
+    # print('The most common words are:', t)
+    t = most_common(hist)
+    for freq, word in t[0:20]:
+        print(word, '\t', freq)
 
     # words = process_file('data/words.txt', skip_header=False)
 
@@ -131,9 +131,9 @@ def main():
     # for word in diff.keys():
     #     print(word, end=' ')
 
-    print("\n\nHere are some random words from the book")
-    for i in range(100):
-        print(random_word(hist), end=' ')
+    # print("\n\nHere are some random words from the book")
+    # for i in range(100):
+    #     print(random_word(hist), end=' ')
 
 
 if __name__ == '__main__':
