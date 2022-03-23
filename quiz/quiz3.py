@@ -82,7 +82,7 @@ def simulation(names, num_of_calls):
     for i in range(num_of_calls):
         x = random.choice(names)
         dic[x] += 1
-    print(dic)
+    return(dic)
 
 
 # When you've completed your function, uncomment the following lines and run this file to test!
@@ -136,13 +136,16 @@ random.seed(42)
 
 def print_hist_by_number(data):
     """"""
+    for k in data:
+        print(k,":",'*'*data[k])
+ 
 
 
 ## When you've completed your function, uncomment the following lines and run this file to test!
 
-name_list = get_name_list()
-name_dict = simulation(name_list, 200)
-print_hist_by_number(name_dict)
+# name_list = get_name_list()
+# name_dict = simulation(name_list, 200)
+# print_hist_by_number(name_dict)
 
 ## Expected output:
 # Jason: ************
