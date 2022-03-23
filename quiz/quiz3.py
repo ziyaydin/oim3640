@@ -134,7 +134,7 @@ Q5. Please complete the following function that prints rows with the name and a 
 random.seed(42)
 
 
-def print_hist_by_number(data):
+def print_hist_by_number(data): #NEED TO SORT BASED ON VALUE
     """"""
     for k in data:
         print(k,":",'*'*data[k])
