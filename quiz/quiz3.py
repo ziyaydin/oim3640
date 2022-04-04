@@ -82,7 +82,7 @@ def simulation(names, num_of_calls):
     for i in range(num_of_calls):
         x = random.choice(names)
         dic[x] += 1
-    return(dic)
+    return dic
 
 
 # When you've completed your function, uncomment the following lines and run this file to test!
