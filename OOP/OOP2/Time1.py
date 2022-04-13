@@ -3,7 +3,10 @@ class Time:
 
     attributes: hour, minute, second
     """
-
+time = Time()
+time.hour = 1
+time.minute = 31
+time.second = 30
 
 #######################
 # Exercise 1
@@ -15,11 +18,13 @@ def print_time(t):
 
     t: Time object
     """
+    print "%.2d:%.2d:%.2d" % (time.hour, time.minute, time.second)
 
+# print_time(time)
 
 def is_after(t1, t2):
     """Returns True if t1 is after t2; false otherwise."""
-
+    return (t1.hour, t1.minute, t1.second) > (t2.hour, t2.minute, t2.second)
 
 #######################
 # Prototyping
@@ -50,18 +55,18 @@ def add_time2(t1, t2):
 
 
 # Uncomment below for testing
-# start = Time()
-# start.hour = 9
-# start.minute = 45
-# start.second = 0
+start = Time()
+start.hour = 9
+start.minute = 45
+start.second = 0
 
-# duration = Time()
-# duration.hour = 1
-# duration.minute = 35
-# duration.second = 0
+duration = Time()
+duration.hour = 1
+duration.minute = 35
+duration.second = 0
 
-# done = add_time2(start, duration)
-# print_time(done)
+done = add_time2(start, duration)
+print_time(done)
 
 
 def increment(time, seconds):
