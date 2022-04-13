@@ -1,19 +1,32 @@
-#I DID THE READINGS BUT STILL DID NOT FULLY UNDERSTAND THE TOPIC
-#USING THE CODE OF: https://github.com/AllenDowney/ThinkPython2/blob/8f3fc6396143b6f71802b6b2b2756236467da2b9/code/Point1_soln.py
-class Point:
-    """Represents a point in 2-D space.
-
-    attributes: x, y
-    """
-my_point = Point()
-my_point
-
-from __future__ import print_function, division
-
-import copy
+#used the code of https://github.com/OIM3640/oim3640/blob/main/OOP/OOP1/Point1_solution.py
 import math
 
-from Point1 import Point, Rectangle
+
+class Point:
+    """Represents a point in 2-D space.
+    attributes: x, y
+    """
+
+
+# my_point = Point()
+# # print(my_point)
+# # print(type(my_point))
+# # print(my_point.__doc__)
+# my_point.x = 3.0
+# my_point.y = 4.0
+# # print(my_point.x, my_point.y)
+
+
+def print_point(p):
+    """Print a Point object in human-readable format."""
+    print(f"({p.x}, {p.y}).")
+
+
+# print_point(my_point)
+
+# print(hasattr(my_point, 'x'))
+# print(hasattr(my_point, 'z'))
+# print(dir(my_point))
 
 
 def distance_between_points(p1, p2):
@@ -22,64 +35,137 @@ def distance_between_points(p1, p2):
     p2: Point
     returns: float
     """
-    dx = p1.x - p2.x
-    dy = p1.y - p2.y
-    dist = math.sqrt(dx**2 + dy**2)
-    return dist
+    d_x = p2.x - p1.x
+    d_y = p2.y - p1.y
+    d = math.sqrt(d_x ** 2 + d_y ** 2)
+    return d
 
 
-def move_rectangle(rect, dx, dy):
-    """Move the Rectangle by modifying its corner object.
-    rect: Rectangle object.
-    dx: change in x coordinate (can be negative).
-    dy: change in y coordinate (can be negative).
+# another_point = Point()
+# # another_point.x = 6
+# # another_point.y = 8
+
+# another_point.x, another_point.y = 6, 8
+# print()
+# print_point(my_point)
+# print_point(another_point)
+# print(distance_between_points(my_point, another_point))
+
+
+class Rectangle:
+    """Represents a rectangle. 
+    attributes: width, height, corner.
     """
-    rect.corner.x += dx
-    rect.corner.y += dy
 
 
-def move_rectangle_copy(rect, dx, dy):
-    """Move the Rectangle and return a new Rectangle object.
-    rect: Rectangle object.
-    dx: change in x coordinate (can be negative).
-    dy: change in y coordinate (can be negative).
-    returns: new Rectangle
+# box = Rectangle()
+# box.width = 100.0
+# box.height = 200.0
+# box.corner = Point()
+# box.corner.x = 0
+# box.corner.y = 0
+
+# print(distance_between_points(my_point, box.corner))
+
+
+def find_center(rect):
+    """Returns a Point at the center of a Rectangle.
+    rect: Rectangle
+    returns: new Point
     """
-    new = copy.deepcopy(rect)
-    move_rectangle(new, dx, dy)
-    return new
+    p = Point()
+    p.x = rect.corner.x + rect.width / 2.0
+    p.y = rect.corner.y + rect.height / 2.0
+    return p
+
+
+# center_of_box = find_center(box)
+# print_point(center_of_box)
+
+
+def grow_rectangle(rect, dwidth, dheight):
+    """Modifies the Rectangle by adding to its width and height.
+    rect: Rectangle object.
+    dwidth: change in width (can be negative).
+    dheight: change in height (can be negative).
+    """
+    rect.width += dwidth
+    rect.height += dheight
+
+
+def print_rectangle(rect):
+    """
+    prints the width, height and lower-left corner of the given Rectangle object
+    """
+    print(f"width: {rect.width}, height:{rect.height}")
+    print("the lower-left corner:")
+    print_point(rect.corner)
+
+
+# print_rectangle(box)
+# grow_rectangle(box, 100, 100)
+# print("After growing...")
+# print_rectangle(box)
 
 
 def main():
-    blank = Point()
-    blank.x = 0
-    blank.y = 0
+    my_point = Point()
+    print(Point.__doc__)
+    my_point.x = 3
+    my_point.y = 4
+    print('My point', end=' ')
+    print_point(my_point)
 
-    grosse = Point()
-    grosse.x = 3
-    grosse.y = 4
-
-    print('distance', end=' ')
-    print(distance_between_points(grosse, blank))
+    print('Is my_point an instance of Point?', isinstance(my_point, Point))
+    print('Is my_point an instance of Rectangle?',
+          isinstance(my_point, Rectangle))
+    print('Does my_point have an attribute x?', hasattr(my_point, 'x'))
+    print('Does my_point have an attribute z?', hasattr(my_point, 'z'))
 
     box = Rectangle()
     box.width = 100.0
     box.height = 200.0
     box.corner = Point()
-    box.corner.x = 50.0
-    box.corner.y = 50.0
+    box.corner.x = 0.0
+    box.corner.y = 0.0
 
-    print(box.corner.x)
-    print(box.corner.y)
-    print('move')
-    move_rectangle(box, 50, 100)
-    print(box.corner.x)
-    print(box.corner.y)
+    print('Does box have an attribute x?', hasattr(box, 'x'))
 
-    new_box = move_rectangle_copy(box, 50, 100)
-    print(new_box.corner.x)
-    print(new_box.corner.y)
+    print('Does box have an attribute corner?', hasattr(box, 'corner'))
+
+    print('Rectangle has these:', dir(box))
+
+    center = find_center(box)
+    print('center', end=' ')
+    print_point(center)
+
+    # print(box.width)
+    # print(box.height)
+    print_rectangle(box)
+    print('grow')
+    grow_rectangle(box, 50, 100)
+    # print(box.width)
+    # print(box.height)
+    print_rectangle(box)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
+    # p1 = Point()
+    # p1.x = 3
+    # p1.y = 4
+
+    # import copy
+    # p2 = copy.copy(p1)
+
+    # print_point(p1)
+    # print_point(p2)
+
+    # print(id(p1))
+    # print(id(p2))
+    # print(p1 is p2)
+
+    # print(p1.x is p2.x)
+    # print(p1 == p2)
+
+    # print(dir(p1))

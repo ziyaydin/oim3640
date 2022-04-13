@@ -1,12 +1,6 @@
-#I DID THE READINGS BUT STILL DID NOT FULLY UNDERSTAND THE TOPIC
-# USED SOLUTIONS OF: https://github.com/AllenDowney/ThinkPython2/blob/8f3fc6396143b6f71802b6b2b2756236467da2b9/code/Circle.py#L17
-
-from __future__ import print_function, division
-
+#used the code from: https://github.com/OIM3640/oim3640/blob/main/OOP/OOP1/Circle_solution.py
+from Point1 import *
 import copy
-
-from Point1 import Point, Rectangle, print_point
-from Point1 import distance_between_points
 
 
 class Circle:
@@ -15,74 +9,71 @@ class Circle:
     """
 
 
-# USED SOLUTIONS OF: https://github.com/AllenDowney/ThinkPython2/blob/8f3fc6396143b6f71802b6b2b2756236467da2b9/code/Circle.py#L17
 def point_in_circle(point, circle):
     """Checks whether a point lies inside a circle (or on the boundary).
-
     point: Point object
     circle: Circle object
     """
     d = distance_between_points(point, circle.center)
-    print(d)
+    # print(d)
     return d <= circle.radius
 
-# USED SOLUTIONS OF: https://github.com/AllenDowney/ThinkPython2/blob/8f3fc6396143b6f71802b6b2b2756236467da2b9/code/Circle.py#L17
+
 def rect_in_circle(rect, circle):
     """Checks whether the corners of a rect fall in/on a circle.
-
     rect: Rectangle object
     circle: Circle object
     """
     p = copy.copy(rect.corner)
-    print_point(p)
+    # print_point(p)
     if not point_in_circle(p, circle):
         return False
 
     p.x += rect.width
-    print_point(p)
+    # print_point(p)
     if not point_in_circle(p, circle):
         return False
 
-    p.y -= rect.height
-    print_point(p)
+    p.y += rect.height
+    # print_point(p)
     if not point_in_circle(p, circle):
         return False
 
     p.x -= rect.width
-    print_point(p)
+    # print_point(p)
     if not point_in_circle(p, circle):
         return False
 
     return True
-# USED SOLUTIONS OF: https://github.com/AllenDowney/ThinkPython2/blob/8f3fc6396143b6f71802b6b2b2756236467da2b9/code/Circle.py#L17
+
 
 def rect_circle_overlap(rect, circle):
     """Checks whether any corners of a rect fall in/on a circle.
-
     rect: Rectangle object
     circle: Circle object
     """
     p = copy.copy(rect.corner)
-    print_point(p)
+    # print_point(p)
     if point_in_circle(p, circle):
         return True
 
     p.x += rect.width
-    print_point(p)
+    # print_point(p)
     if point_in_circle(p, circle):
         return True
 
-    p.y -= rect.height
-    print_point(p)
+    p.y += rect.height
+    # print_point(p)
     if point_in_circle(p, circle):
         return True
 
     p.x -= rect.width
-    print_point(p)
+    # print_point(p)
     if point_in_circle(p, circle):
         return True
 
     return False
+
 
 def main():
     box = Rectangle()
